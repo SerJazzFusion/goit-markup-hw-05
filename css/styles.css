@@ -1,0 +1,632 @@
+/* Список цветов */
+
+:root {
+  --primary-text-color: #212121;
+  --second-text-color: #757575;
+  --accent-color: #2196f3;
+  --main-bgc-text: #ffffff;
+  --second-bgc-color: #f5f4fa;
+  --third-bgc-color: #2f303a;
+  --contacts-text-color: rgba(255, 255, 255, 0.6);
+  --line-color: #ececec;
+  --border-color: #eeeeee;
+  --logo-text-color: #000000;
+  --bgcolor-btn: #188ce8;
+  --border-logo-color: #afb1b8;
+}
+
+/* Утилиты и общие правила */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--main-bgc-text);
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Шапка */
+
+.header {
+  border-bottom: 1px solid var(--line-color);
+  font-weight: 500;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.header-logo,
+.footer-logo {
+  color: var(--accent-color);
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+}
+
+.header-logo.line {
+  margin-right: 93px;
+}
+
+.header-logo-side {
+  color: var(--logo-text-color);
+}
+
+.list-style {
+  display: flex;
+}
+
+.nav-list.list-style > li {
+  margin-right: 50px;
+}
+
+.nav-list.list-style > li:last-child {
+  margin-right: 0;
+}
+
+.nav {
+  margin-right: auto;
+}
+
+.header-contact {
+  margin-right: 50px;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  color: var(--primary-text-color);
+  line-height: 1.14;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+}
+
+.line.current {
+  color: var(--accent-color);
+}
+
+.link.line {
+  letter-spacing: 0.02em;
+}
+
+.list-style {
+  list-style: none;
+}
+
+.list-style .title {
+  margin-bottom: 10px;
+}
+
+.contact {
+  color: var(--second-text-color);
+}
+
+.contact.line {
+  letter-spacing: 0.02em;
+
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.contact:hover,
+.contact:focus {
+  color: var(--accent-color);
+}
+
+.line {
+  text-decoration: none;
+}
+
+/* Герой */
+
+.hero.section {
+  text-align: center;
+}
+
+.hero {
+  background-color: var(--third-bgc-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+
+.overlay {
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-title {
+  margin-bottom: 30px;
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: var(--main-bgc-text);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.hero-button {
+  padding: 10px 32px;
+
+  color: var(--main-bgc-text);
+  background-color: var(--accent-color);
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border: none;
+
+  border-radius: 4px;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--bgcolor-btn);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Ососбенности */
+
+.section.benefits,
+.section.about {
+  padding-bottom: 0;
+}
+.benefits-item .text {
+  line-height: 1.71;
+}
+
+.benefits .list-style,
+.filter .list-style.btn {
+  justify-content: center;
+}
+
+.benefits-item {
+  margin-right: 30px;
+}
+
+.benefits-item:last-child {
+  margin-right: 0;
+}
+
+.benefit-box-icon {
+  display: flex;
+
+  height: 120px;
+  background-color: var(--second-bgc-color);
+  margin-bottom: 30px;
+  border-radius: 4px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  width: 270px;
+
+  color: var(--primary-text-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.14;
+  font-size: 14px;
+}
+
+.text {
+  width: 270px;
+
+  color: var(--second-text-color);
+  line-height: 1.14;
+}
+
+/* Чем мы занимаемся */
+
+.about .list-style {
+  justify-content: center;
+}
+
+.about-item {
+  margin-right: 30px;
+}
+
+.about-img {
+  display: block;
+  margin-bottom: 0;
+}
+
+.about-item:last-child {
+  margin-right: 0;
+}
+
+.about-title,
+.team-title,
+.customers-title {
+  margin-bottom: 50px;
+
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+}
+
+/* Команда */
+
+.team {
+  background-color: var(--second-bgc-color);
+}
+.section.about {
+  padding-bottom: 94px;
+}
+
+.team-item {
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-img {
+  display: block;
+}
+
+.team .title {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: none;
+  text-align: center;
+}
+
+.team .text {
+  font-size: 16px;
+  text-align: center;
+}
+
+.list-icon:not(:last-child) {
+  margin-right: 10px;
+}
+
+.link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--main-bgc-text);
+
+  color: var(--border-logo-color);
+}
+
+.link-icon:hover,
+.link-icon:focus {
+  background-color: var(--accent-color);
+  color: var(--main-bgc-text);
+}
+
+.icon-soc {
+  fill: currentColor;
+}
+
+.list-style-social {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 16px;
+  background-color: var(--main-bgc-text);
+}
+
+.team-undercard {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: var(--main-bgc-text);
+  border-radius: 0px 0px 4px 4px;
+}
+/* Постоянные клиенты */
+
+.customer-link:hover {
+  border-color: var(--accent-color);
+}
+
+.customer-box:not(:last-child) {
+  margin-right: 30px;
+}
+
+.customer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--border-logo-color);
+  border-radius: 4px;
+
+  color: var(--border-logo-color);
+}
+
+.customer-link:hover,
+.customer-link:focus {
+  color: var(--accent-color);
+}
+
+.customer-icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}
+
+/* Подвал */
+
+.footer {
+  background-color: var(--third-bgc-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.address-all {
+  margin-top: 20px;
+}
+
+.address-style {
+  list-style: none;
+}
+
+.footer-logo-side,
+.address {
+  color: var(--main-bgc-text);
+}
+
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address,
+.mail,
+.tel {
+  font-style: normal;
+  line-height: 1.7;
+}
+
+.mail,
+.tel {
+  color: var(--contacts-text-color);
+}
+
+.mail:hover,
+.mail:focus,
+.tel:hover,
+.tel:focus,
+.address:hover,
+.address:focus {
+  color: var(--accent-color);
+}
+
+.list-icon-footer:not(:last-child):not(:last-child) {
+  margin-right: 10px;
+}
+
+.link-icon-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  color: var(--main-bgc-text);
+}
+
+.link-icon-footer:hover,
+.link-icon-footer:focus {
+  background-color: var(--accent-color);
+  color: var(--main-bgc-text);
+}
+
+.icon-soc-footer {
+  fill: currentColor;
+}
+
+.list-style-social.footer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: left;
+  list-style: none;
+}
+
+.join-title {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+  color: var(--main-bgc-text);
+}
+
+.container.footer-box {
+  display: flex;
+  align-items: baseline;
+}
+
+.address-box {
+  margin-right: 70px;
+}
+
+
+/* Примеры работ кнопки */
+
+.exmp-button {
+  padding: 6px 22px;
+
+  background-color: var(--second-bgc-color);
+  color: var(--primary-text-color);
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  border-radius: 4px;
+}
+
+.list-style.btn {
+  margin-bottom: 50px;
+}
+
+.exmp-button:hover,
+.exmp-button:focus {
+  background-color: var(--accent-color);
+  color: var(--main-bgc-text);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filter .btn-item {
+  margin-right: 8px;
+}
+
+.filter .btn-item:last-child {
+  margin-right: 0;
+}
+
+.card-work {
+  width: 370px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.link-work {
+  display: block;
+}
+
+.link-work:hover,
+.link-work:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card-work:nth-child(3n) {
+  margin-right: 0;
+}
+
+.card-work:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.card.list-style {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.border-exmp {
+  padding: 20px 24px;
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+.card-img {
+  display: block;
+}
+
+.title.exmp {
+  margin-bottom: 4px;
+  width: auto;
+
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: none;
+  line-height: 2;
+  text-align: start;
+}
+
+.text.exmp {
+  width: auto;
+
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: start;
+}
