@@ -147,10 +147,13 @@ img {
 }
 
 .link {
-  color: var(--primary-text-color);
+  padding-bottom: 32px;
   line-height: 1.14;
+  letter-spacing: 0.02em;
 
-  transition: var(--main-transition);
+  color: var(--primary-text-color);
+
+  transition: color var(--main-transition);
 }
 
 .link:hover,
@@ -160,11 +163,6 @@ img {
 
 .line.current {
   color: var(--accent-color);
-}
-
-.link.line {
-  padding-bottom: 32px;
-  letter-spacing: 0.02em;
 }
 
 .list-style {
@@ -180,12 +178,13 @@ img {
 }
 
 .contact.line {
+
   letter-spacing: 0.02em;
 
   display: flex;
   align-items: center;
 
-  transition: var(--main-transition);
+  transition: color var(--main-transition);
 }
 
 .contact-icon {
@@ -258,7 +257,7 @@ img {
   border: none;
   border-radius: 4px;
 
-  transition: var(--main-transition);
+  transition: background-color var(--main-transition), box-shadow var(--main-transition) ;
 }
 
 .backdrop {
@@ -288,8 +287,8 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
-  min-width: 528px;
-  min-height: 581px;
+  width: 528px;
+  height: 581px;
   background-color: var(--main-bgc-text);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -378,42 +377,34 @@ img {
 }
 
 .about-item {
-  z-index: -1;
-  margin-right: 30px;
-}
-
-.about-thumb {
   position: relative;
 
-  display: flex;
-  justify-content: center;
-}
-
-.about-thumb::before {
-  content: '';
-
-  position: absolute;
-  width: 100%;
-  height: 70px;
-  bottom: 0;
-  background-color: rgba(47, 48, 58, 0.8);
+  z-index: -1;
+  margin-right: 30px;
 }
 
 .about-img {
   margin-bottom: 0;
 }
 
-.about-desc {
+
+.about-item > p {
+  content: '';
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  bottom: 27px;
-}
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
 
-.about-desc > p {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
 
+  background-color: rgba(47, 48, 58, 0.8);
   color: var(--main-bgc-text);
 }
 
@@ -478,17 +469,18 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var(--main-bgc-text);
+  
 
   color: var(--border-logo-color);
 
-  transition: var(--main-transition);
+  transition: color var(--main-transition), background-color var(--main-transition) ;
 }
 
 .link-icon:hover,
 .link-icon:focus {
-  background-color: var(--accent-color);
   color: var(--main-bgc-text);
+  background-color: var(--accent-color);
+  
 }
 
 .icon-soc {
@@ -511,10 +503,6 @@ img {
 }
 /* Постоянные клиенты */
 
-.customer-link:hover {
-  border-color: var(--accent-color);
-}
-
 .customer-box:not(:last-child) {
   margin-right: 30px;
 }
@@ -531,12 +519,13 @@ img {
 
   color: var(--border-logo-color);
 
-  transition: var(--main-transition);
+  transition: color var(--main-transition), border-color var(--main-transition);
 }
 
 .customer-link:hover,
 .customer-link:focus {
   color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .customer-icon {
@@ -574,11 +563,12 @@ img {
 .tel {
   font-style: normal;
   line-height: 1.7;
+  transition: color var(--main-transition);
 }
 
 .mail,
 .tel {
-  color: var(--contacts-text-color);
+  color: var(--contacts-text-color); 
 }
 
 .mail:hover,
@@ -606,13 +596,12 @@ img {
 
   color: var(--main-bgc-text);
 
-  transition: var(--main-transition);
+  transition: background-color var(--main-transition);
 }
 
 .link-icon-footer:hover,
 .link-icon-footer:focus {
   background-color: var(--accent-color);
-  color: var(--main-bgc-text);
 }
 
 .icon-soc-footer {
@@ -667,7 +656,7 @@ img {
 
   border-radius: 4px;
 
-  transition: var(--main-transition);
+  transition: color var(--main-transition), background-color var(--main-transition), box-shadow var(--main-transition) ;
 }
 
 .list-style.btn {
@@ -738,7 +727,7 @@ img {
 .link-work {
   display: block;
 
-  transition: var(--main-transition);
+  transition: box-shadow var(--main-transition);
 }
 
 .link-work:hover,
